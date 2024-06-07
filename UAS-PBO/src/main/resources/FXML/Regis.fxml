@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="640.0" prefWidth="890.0" style="-fx-background-color: #686D76;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uas_pbo.RegisController">
+   <children>
+      <VBox layoutX="266.0" layoutY="228.0" prefHeight="219.0" prefWidth="358.0" spacing="10.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtUsername" prefHeight="35.0" prefWidth="358.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="txtPassword" prefHeight="35.0" prefWidth="358.0" style="-fx-background-radius: 10;" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="txtConfirm" prefHeight="35.0" prefWidth="358.0" style="-fx-background-radius: 10;" />
+         </children>
+      </VBox>
+      <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="386.0" layoutY="166.0" prefHeight="36.0" prefWidth="128.0" text="SIGN UP" textFill="WHITE">
+         <font>
+            <Font name="Baskerville Old Face" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSignUp" layoutX="361.0" layoutY="480.0" mnemonicParsing="false" onAction="#CreateAkun" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #F9B401; -fx-background-radius: 30;" text="SIGN UP" textFill="WHITE">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font></Button>
+      <Text fill="#fff8f8" layoutX="369.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="have an account ?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="lblSignin" fill="#f9b401" layoutX="482.0" layoutY="549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="187.0" fitWidth="211.0" layoutX="352.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/Logo%20Toko.png" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <InnerShadow>
+         <color>
+            <Color red="0.5882353186607361" green="0.5215686559677124" blue="0.7176470756530762" />
+         </color>
+      </InnerShadow>
+   </effect>
+</AnchorPane>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="651.0" prefWidth="914.0" style="-fx-background-color: #01294D;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uas_pbo.AdminController">
+   <children>
+      <TableView fx:id="table" layoutX="72.0" layoutY="146.0" prefHeight="158.0" prefWidth="782.0">
+        <columns>
+          <TableColumn fx:id="ColumnNo" prefWidth="64.0" text="No Seri" />
+          <TableColumn fx:id="ColumnNama" prefWidth="168.7999725341797" text="Nama Sparepart" />
+            <TableColumn fx:id="ColumnMerek" prefWidth="115.99993896484375" text="Merek Sparepart" />
+            <TableColumn fx:id="ColumnKategori" prefWidth="127.20001220703125" text="Kategori Sparepart" />
+            <TableColumn fx:id="ColumnTanggal" prefWidth="111.20001220703125" text="Tanggal Produksi" />
+            <TableColumn fx:id="ColumnStok" prefWidth="65.59991455078125" text="Stok" />
+            <TableColumn fx:id="ColumnHarga" prefWidth="128.0" text="Harga Sparepart" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="262.0" layoutY="34.0" prefHeight="39.0" prefWidth="426.0" text="PENDATAAN SPAREPART MOBIL" textFill="#fffefe">
+         <font>
+            <Font name="Arial Bold" size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearch" layoutX="72.0" layoutY="105.0" prefHeight="26.0" prefWidth="278.0" promptText="Seacrch">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Button fx:id="btnLogout" layoutX="751.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: #F9B401; -fx-background-radius: 30;" text="LOGOUT" textFill="#eeeeee">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Button>
+      <VBox layoutX="72.0" layoutY="332.0" prefHeight="310.0" prefWidth="266.0" spacing="8.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="No Seri">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtNoSeri" prefHeight="31.0" prefWidth="266.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Sparepart">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtNama" prefHeight="31.0" prefWidth="266.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Merek Sparepart">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="cbMerek" prefHeight="31.0" prefWidth="266.0" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategori Sparepart">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <HBox prefHeight="63.0" prefWidth="222.0" spacing="10.0">
+               <children>
+                  <RadioButton fx:id="rbGenuine" mnemonicParsing="false" prefHeight="34.0" prefWidth="95.0" text="Genuine" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rbOem" mnemonicParsing="false" prefHeight="34.0" prefWidth="95.0" text="Oem" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="362.0" layoutY="332.0" prefHeight="212.0" prefWidth="288.0" spacing="8.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Harga Sparepart">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtHarga" prefHeight="31.0" prefWidth="288.0" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Produksi">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="date" prefHeight="31.0" prefWidth="288.0" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Stok Sparepart">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtStok" prefHeight="31.0" prefWidth="288.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="731.0" layoutY="353.0" prefHeight="200.0" prefWidth="133.0" spacing="15.0">
+         <children>
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#CreateSparepart" prefHeight="38.0" prefWidth="143.0" style="-fx-background-color: #F9B401; -fx-background-radius: 10;" text="SIMPAN" textFill="#fffafa">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#UpdateSparepart" prefHeight="38.0" prefWidth="149.0" style="-fx-background-color: #F9B401; -fx-background-radius: 10;" text="UBAH" textFill="#fffafa">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font></Button>
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#DeleteSparepart" prefHeight="38.0" prefWidth="154.0" style="-fx-background-color: #F9B401; -fx-background-radius: 10;" text="HAPUS" textFill="#fffafa">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font></Button>
+          <Button fx:id="btnClear" mnemonicParsing="false" onAction="#ClearField" prefHeight="38.0" prefWidth="177.0" style="-fx-background-color: #F9B401; -fx-background-radius: 10;" text="CANCEL" textFill="#fffafa">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font></Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
